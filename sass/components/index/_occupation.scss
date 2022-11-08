@@ -1,0 +1,29 @@
+.occupation {
+  padding-top: 0;
+}
+
+.occupation__list {
+  display: flex;
+  gap: 30px;
+}
+
+.occupation__thumb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.occupation__text {
+  position: absolute;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-color;
+  background-color: $occupation-text-bg;
+}

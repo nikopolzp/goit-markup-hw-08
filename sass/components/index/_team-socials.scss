@@ -1,0 +1,35 @@
+.socials__list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  gap: 10px;
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+}
+
+.socials__link {
+  @include centeredFlex();
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: background-color $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.socials__icon {
+  fill: $socials-bg;
+  transition: fill $timing-function;
+
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: $primary-color;
+  }
+}

@@ -1,0 +1,31 @@
+.features__list {
+  display: flex;
+  gap: 30px;
+}
+
+.features___item {
+  width: 270px;
+}
+
+.features__icon-background {
+  @include centeredFlex();
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: $portfolio-bg-btn-color;
+  border-radius: 4px;
+}
+
+.features__subtitle {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features__text {
+  line-height: 1.71;
+}

@@ -1,0 +1,25 @@
+.contact__list {
+  @include centeredFlex();
+  margin-left: auto;
+  gap: 50px;
+}
+
+.contact__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contact__link {
+  @include centeredFlex();
+  padding: 32px 0;
+
+  font-weight: 500;
+  color: $primary-text-color;
+  text-decoration: none;
+  transition: color $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

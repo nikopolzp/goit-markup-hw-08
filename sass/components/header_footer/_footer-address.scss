@@ -1,0 +1,41 @@
+.address {
+  margin-right: 70px;
+}
+
+.address__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: $accent-color;
+}
+
+.address__accent {
+  color: $primary-color;
+}
+
+.address__item:not(:last-child) {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.address__location {
+  line-height: 1.71;
+  color: $primary-color;
+  transition: color $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address__link {
+  line-height: 1.71;
+  color: $footer-communication-color;
+  transition: color $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
