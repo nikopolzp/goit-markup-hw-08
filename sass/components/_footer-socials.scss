@@ -19,13 +19,7 @@
 }
 
 .socials__link {
-  @include centeredFlex();
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
   background-color: $footer-socials-bg;
-  transition: background-color $timing-function;
 
   &:hover,
   &:focus {

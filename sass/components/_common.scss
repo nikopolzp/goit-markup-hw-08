@@ -1,0 +1,35 @@
+.button {
+  font-weight: 700;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color $timing-function, box-shadow $timing-function;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.17;
+
+  color: $title-text-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.subtitle {
+  color: $title-text-color;
+}

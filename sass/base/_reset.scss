@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $primary-text-color;
+  letter-spacing: 0.03em;
+  background-color: $primary-color;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
