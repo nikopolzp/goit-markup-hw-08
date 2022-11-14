@@ -1,13 +1,18 @@
 .header {
+  @include centeredFlex();
   border-bottom: 1px solid $header-border-color;
 }
 
-.main-nav {
-  @include centeredFlex();
+@media screen and (min-width: $tablet) {
+  .main-nav {
+    @include centeredFlex();
+  }
 }
 
-.nav {
-  @include centeredFlex();
+@media screen and (min-width: $tablet) {
+  .nav {
+    @include centeredFlex();
+  }
 }
 
 .logo {
@@ -29,40 +34,75 @@
 }
 
 .nav__list {
-  display: flex;
+  display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__list {
+    margin-bottom: 302px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .nav__list {
+    display: flex;
+  }
 }
 
 .nav__item:not(:first-child) {
-  padding-left: 50px;
+  margin-left: 50px;
 }
 
-.nav__link {
-  display: block;
-  padding: 32px 0;
-
-  line-height: 1.14;
-  font-weight: 500;
-  color: $title-text-color;
-  transition: color $timing-function;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
+@media screen and (max-width: 767px) {
+  .nav__item:not(:first-child) {
+    margin-left: 0px;
+    margin-top: 32px;
   }
+}
+@media screen and (max-width: 767px) {
+  .nav__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(40 / 47);
+    letter-spacing: 0.02em;
 
-  &--current {
-    position: relative;
-    color: $accent-color;
+    color: #212121;
 
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 4px;
-      background-color: $accent-color;
-      border-radius: 2px;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .nav__link {
+    display: block;
+    padding: 32px 0;
+
+    line-height: 1.14;
+    font-weight: 500;
+    color: $title-text-color;
+    transition: color $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &--current {
+      position: relative;
+      color: $accent-color;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 2px;
+      }
     }
   }
 }

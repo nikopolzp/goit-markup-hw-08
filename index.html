@@ -22,12 +22,31 @@
   </head>
 
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container main-nav">
-        <nav class="nav">
+        <div class="mobile-menu">
           <a class="logo nav__logo" lang="en" href="./index.html"
             >Web<span class="nav__accent">Studio</span></a
           >
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            type="button"
+          >
+            <svg
+              class="header__burger-menu"
+              aria-label="перемикач мобільного меню"
+              width="40"
+              height="40"
+            >
+              <use class="header__icon-menu" href="./images/icons.svg#icon-menu_burger"></use>
+              <use class="header__icon-cross" href="./images/icons.svg#icon-menu_close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link nav__link--current" href="./index.html">Студія</a>
@@ -38,26 +57,43 @@
             <li class="nav__item"><a class="nav__link" href="#">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="contact contact__list">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <div class="nav__menu">
+          <ul class="contact contact__list">
+            <li class="contact__item">
+              <a class="contact__link contact__link--big" href="mailto:info@devstudio.com">
+                <svg class="contact__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contact__item">
+              <a class="contact__link contact__link--big-blue" href="tel:+380961111111">
+                <svg class="contact__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+
+          <ul class="burger-socials__list">
+            <li class="burger-socials__item">
+              <a class="burger-socials__link" href="#">Instagram</a>
+            </li>
+            <li class="burger-socials__item">
+              <a class="burger-socials__link" href="#">Twitter</a>
+            </li>
+            <li class="burger-socials__item">
+              <a class="burger-socials__link" href="#">Facebook</a>
+            </li>
+            <li class="burger-socials__item">
+              <a class="burger-socials__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <section class="hero">
@@ -127,37 +163,67 @@
           <ul class="occupation__list">
             <li class="occupation__item item">
               <div class="occupation__thumb">
-                <img
-                  class="occupation__image image"
-                  src="./images/what-are-we-doing1.jpg"
-                  alt="Пишемо код"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/what-are-we-doing-1-370.jpg 1x,
+                      ./images/what-are-we-doing-1-740.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
 
+                  <img
+                    class="occupation__image image"
+                    src="./images/what-are-we-doing-1-370.jpg"
+                    sizes="(min-width:1200px) 33vw"
+                    alt="Пишемо код"
+                    width="370"
+                  />
+                </picture>
                 <p class="occupation__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="occupation__item">
               <div class="occupation__thumb">
-                <img
-                  class="occupation__image image"
-                  src="./images/what-are-we-doing2.jpg"
-                  alt="Розробляємо дизайн"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/what-are-we-doing-2-370.jpg 1x,
+                      ./images/what-are-we-doing-2-740.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
 
+                  <img
+                    class="occupation__image image"
+                    src="./images/what-are-we-doing-2-370.jpg"
+                    sizes="(min-width:1200px) 33vw"
+                    alt="Розробляємо дизайн"
+                    width="370"
+                  />
+                </picture>
                 <p class="occupation__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="occupation__item">
               <div class="occupation__thumb">
-                <img
-                  class="occupation__image image"
-                  src="./images/what-are-we-doing3.jpg"
-                  alt="Вибираємо кольорову гамму"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/what-are-we-doing-3-370.jpg 1x,
+                      ./images/what-are-we-doing-3-740.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
 
+                  <img
+                    class="occupation__image image"
+                    src="./images/what-are-we-doing-3-370.jpg"
+                    sizes="(min-width:1200px) 33vw"
+                    alt="Вибираємо кольорову гамму"
+                    width="370"
+                  />
+                </picture>
                 <p class="occupation__text">Дизайнерські рішення</p>
               </div>
             </li>
@@ -170,12 +236,31 @@
           <h2 class="team__title title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__image image"
-                src="./images/team-card1.jpg"
-                alt="Член команди"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-1-mobile-450.jpg 1x, ./images/team-1-mobile-900.jpg 2x"
+                  media="(max-width: 767)"
+                />
+
+                <source
+                  srcset="./images/team-1-tablet-354.jpg 1x, ./images/team-1-tablet-708.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/team-1-desktop-270.jpg 1x, ./images/team-1-desktop-540.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  class="team__image image"
+                  src="./images/team-1-mobile-450.jpg"
+                  alt="Член команди"
+                  width="450"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw,
+              100vw"
+                />
+              </picture>
               <h3 class="team__subtitle subtitle">Ігор Дем'яненко</h3>
               <p class="team__text" lang="en">Product Designer</p>
               <ul class="socials__list">
@@ -210,12 +295,31 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__image image"
-                src="./images/team-card2.jpg"
-                alt="Член команди"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-2-mobile-450.jpg 1x, ./images/team-2-mobile-900.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/team-2-tablet-354.jpg 1x, ./images/team-2-tablet-708.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/team-2-desktop-270.jpg 1x, ./images/team-2-desktop-540.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  class="team__image image"
+                  src="./images/team-2-mobile-450.jpg"
+                  alt="Член команди"
+                  width="450"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw,
+              100vw"
+                />
+              </picture>
               <h3 class="team__subtitle subtitle">Ольга Рєпіна</h3>
               <p class="team__text" lang="en">Frontend Developer</p>
               <ul class="socials__list">
@@ -250,12 +354,31 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__image image"
-                src="./images/team-card3.jpg"
-                alt="Член команди"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-3-mobile-450.jpg 1x, ./images/team-3-mobile-900.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/team-3-tablet-354.jpg 1x, ./images/team-3-tablet-708.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/team-3-desktop-270.jpg 1x, ./images/team-3-desktop-540.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  class="team__image image"
+                  src="./images/team-3-mobile-450.jpg"
+                  alt="Член команди"
+                  width="450"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw,
+              100vw"
+                />
+              </picture>
               <h3 class="team__subtitle subtitle">Микола Тарасов</h3>
               <p class="team__text" lang="en">Marketing</p>
               <ul class="socials__list">
@@ -290,12 +413,31 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__image image"
-                src="./images/team-card4.jpg"
-                alt="Член команди"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-4-mobile-450.jpg 1x, ./images/team-4-mobile-900.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/team-4-tablet-354.jpg 1x, ./images/team-4-tablet-708.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/team-4-desktop-270.jpg 1x, ./images/team-4-desktop-540.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  class="team__image image"
+                  src="./images/team-4-mobile-450.jpg"
+                  alt="Член команди"
+                  width="450"
+                  sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw,
+              100vw"
+                />
+              </picture>
               <h3 class="team__subtitle subtitle">Михайло Єрмаков</h3>
               <p class="team__text" lang="en">UI Designer</p>
               <ul class="socials__list">
@@ -384,7 +526,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-inner">
         <div class="address">
           <a class="address__logo logo" lang="en" href="./index.html"
@@ -459,9 +601,9 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close-btn" type="button" data-modal-close>
           <svg class="modal__close-icon" width="11" height="11">
@@ -522,7 +664,8 @@
           <button class="modal__button" type="submit">Відправити</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

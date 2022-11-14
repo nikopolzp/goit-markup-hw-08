@@ -5,10 +5,40 @@
   max-width: 1600px;
   height: 600px;
   background-color: $secondary-bg-color;
-  background-image: $hero-linear-gradient, url('../images/hero-img.jpg');
+  background-image: $hero-linear-gradient, url('../images/hero-mobile-480.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-resolution: 2dppx) {
+  .background {
+    background-image: url('../images/hero-mobile-960.jpg');
+  }
+}
+
+@media (min-width: 768px) {
+  .background {
+    background-image: url('../images/hero-tablet-768.jpg');
+  }
+
+  @media (min-resolution: 2dppx) {
+    .background {
+      background-image: url('../images/hero-tablet-1536.jpg');
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .background {
+    background-image: url('../images/hero-desktop-1600.jpg');
+  }
+
+  @media (min-resolution: 2dppx) {
+    .background {
+      background-image: url('../images/hero-desktop-3200.jpg');
+    }
+  }
 }
 
 .hero__title {

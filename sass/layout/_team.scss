@@ -4,7 +4,13 @@
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+}
+
+.team__thumb {
+  display: flex;
+  justify-content: center;
 }
 
 .team__image {
@@ -12,6 +18,15 @@
 }
 
 .team__item {
+  @media screen and (max-width: $mobile) {
+    flex-basis: 100%;
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 90px) / 4);
+  }
   box-shadow: $multilevel-box-shadow;
   border-radius: 0px 0px 4px 4px;
   background-color: $primary-color;

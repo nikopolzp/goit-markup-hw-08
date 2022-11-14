@@ -1,9 +1,13 @@
 .occupation {
   padding-top: 0;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .occupation__list {
   display: flex;
+  justify-content: center;
   gap: 30px;
 }
 

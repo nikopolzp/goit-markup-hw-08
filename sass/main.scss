@@ -2,12 +2,14 @@
 @import './utils/visually-hidden';
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/breakpoints';
 // --------------BASE-------------------
 @import './base/reset';
 // -----------COMPONENTS----------------
 @import './components/common';
 @import './components/main-nav';
 @import './components/contact-list';
+@import './components/nav-menu-burger';
 @import './components/team-socials';
 @import './components/footer';
 @import './components/footer-address';
@@ -16,7 +18,6 @@
 @import './components/modal';
 @import './components/form';
 // -------------LAYOUT------------------
-
 @import './layout/hero';
 @import './layout/features';
 @import './layout/occupation';
