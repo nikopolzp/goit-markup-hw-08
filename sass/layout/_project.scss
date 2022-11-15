@@ -1,7 +1,26 @@
 .project__list {
-  // display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .project__list {
+    margin-bottom: 40px;
+    max-width: 326px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project__list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project__list {
+    margin-bottom: 50px;
+  }
 }
 
 .project__item {
@@ -13,6 +32,7 @@
 .project__button {
   padding: 6px 22px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.63;
   color: $title-text-color;
   background-color: $portfolio-bg-btn-color;
@@ -24,14 +44,4 @@
   color: $primary-color;
   background-color: $accent-color;
   box-shadow: $multilevel-box-shadow;
-}
-
-.project .examples {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.project .item-card {
-  flex-basis: calc((100% - 60px) / 3);
 }

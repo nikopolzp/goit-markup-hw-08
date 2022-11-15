@@ -1,3 +1,22 @@
+.project-examples__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.project-examples__item {
+  @media screen and (max-width: 767px) {
+    flex-basis: 100%;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
 .project-examples__link {
   transition: box-shadow $timing-function;
   & .link:hover,
@@ -9,7 +28,7 @@
 
 .project-examples__thumb {
   position: relative;
-  width: 370px;
+  max-width: 450px;
   height: 294px;
   overflow: hidden;
 }

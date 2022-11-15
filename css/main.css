@@ -97,8 +97,14 @@ address {
   margin-bottom: 50px;
   text-align: center;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: 1.1785714286;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    line-height: 1.1666666667;
+  }
 }
 
 .subtitle {
@@ -959,7 +965,7 @@ address {
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .team__item {
     flex-basis: 100%;
   }
@@ -1037,10 +1043,27 @@ address {
 }
 
 .project__list {
-  justify-content: center;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+@media screen and (max-width: 767px) {
+  .project__list {
+    margin-bottom: 40px;
+    max-width: 326px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project__list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project__list {
+    margin-bottom: 50px;
+  }
+}
 .project__item:not(:first-child) {
   margin-left: 8px;
 }
@@ -1048,6 +1071,7 @@ address {
 .project__button {
   padding: 6px 22px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.63;
   color: #212121;
   background-color: #f5f4fa;
@@ -1061,14 +1085,26 @@ address {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.project .examples {
+.project-examples__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.project .item-card {
-  flex-basis: calc((100% - 60px) / 3);
+@media screen and (max-width: 767px) {
+  .project-examples__item {
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project-examples__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-examples__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .project-examples__link {
@@ -1081,7 +1117,7 @@ address {
 
 .project-examples__thumb {
   position: relative;
-  width: 370px;
+  max-width: 450px;
   height: 294px;
   overflow: hidden;
 }
