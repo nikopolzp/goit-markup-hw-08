@@ -2,6 +2,17 @@
   margin-left: auto;
 }
 
+@media screen and (max-width: 1199px) {
+  .signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 60px auto 0;
+  }
+}
+
 .signup__input {
   margin-right: 12px;
   padding: 0 16px;
@@ -27,6 +38,13 @@
   &:focus {
     background-color: $hero-btn-active;
     box-shadow: $button-box-shadow;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .signup__input {
+    display: block;
+    margin-bottom: 20px;
   }
 }
 

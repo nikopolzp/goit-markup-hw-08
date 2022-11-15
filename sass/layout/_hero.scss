@@ -43,22 +43,30 @@
 
 .hero__title {
   margin: 0 auto 30px;
-  text-align: center;
-  max-width: 698px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-
+  font-size: 26px;
+  line-height: calc(42 / 26);
+  text-align: center;
+  max-width: 360px;
+  color: $primary-color;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: $primary-color;
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    margin: 0 auto 30px;
+    max-width: 698px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
 }
 
 .hero__button {
   display: block;
   margin: 0 auto;
-  padding: 10px 32px;
-  min-width: 216px;
+  padding: 10px 24px;
+  min-width: 200px;
   color: $primary-color;
   background-color: $accent-color;
 
@@ -66,6 +74,13 @@
   &:focus {
     background-color: $hero-btn-active;
     box-shadow: $button-box-shadow;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__button {
+    padding: 10px 32px;
+    min-width: 216px;
   }
 }
 

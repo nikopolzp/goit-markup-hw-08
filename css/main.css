@@ -445,20 +445,29 @@ address {
 
 .footer-inner {
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-inner {
-    display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
-.address {
-  margin-right: 70px;
+@media screen and (max-width: 767px) {
+  .address {
+    margin-right: 0px;
+    margin-bottom: 60px;
+  }
 }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address {
+    margin-right: 70px;
+    text-align: center;
+  }
+}
 .address__logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -491,6 +500,12 @@ address {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-socials {
+    text-align: center;
+    margin-left: auto;
+  }
+}
 .appeal {
   display: block;
   margin-bottom: 20px;
@@ -525,6 +540,16 @@ address {
   margin-left: auto;
 }
 
+@media screen and (max-width: 1199px) {
+  .signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 60px auto 0;
+  }
+}
 .signup__input {
   margin-right: 12px;
   padding: 0 16px;
@@ -557,6 +582,12 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (max-width: 1199px) {
+  .signup__input {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 .signup__icon {
   margin-left: 10px;
   transform: translateY(25%);
@@ -772,21 +803,29 @@ address {
 }
 .hero__title {
   margin: 0 auto 30px;
-  text-align: center;
-  max-width: 698px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.6153846154;
+  text-align: center;
+  max-width: 360px;
+  color: #ffffff;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
+@media (min-width: 1200px) {
+  .hero__title {
+    margin: 0 auto 30px;
+    max-width: 698px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
+}
 .hero__button {
   display: block;
   margin: 0 auto;
-  padding: 10px 32px;
-  min-width: 216px;
+  padding: 10px 24px;
+  min-width: 200px;
   color: #ffffff;
   background-color: #2196f3;
 }
@@ -795,6 +834,12 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media (min-width: 1200px) {
+  .hero__button {
+    padding: 10px 32px;
+    min-width: 216px;
+  }
+}
 .button:hover,
 .button:focus {
   background-color: #188ce8;

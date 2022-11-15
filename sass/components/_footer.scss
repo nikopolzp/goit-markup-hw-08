@@ -7,13 +7,13 @@
 
 .footer-inner {
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
-
-@media screen and (min-width: $tablet) {
+@media screen and (max-width: 767px) {
   .footer-inner {
-    display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
