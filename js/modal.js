@@ -4,17 +4,17 @@
     closeMenuBtn: document.querySelector('[data-modal-close]'),
     menu: document.querySelector('[data-modal]'),
     body: document.querySelector('body'),
-    menuList: document.querySelector('.mob-menu-list'),
+    // menuList: document.querySelector('.mob-menu-list'),
   };
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
-  refs.menuList.addEventListener('click', removeMenu);
+  // refs.menuList.addEventListener('click', removeMenu);
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
   }
-  function removeMenu() {
-    refs.menu.classList.add('is-hidden');
-    refs.body.classList.remove('no-scroll');
-  }
+  // function removeMenu() {
+  //   refs.menu.classList.add('is-hidden');
+  //   refs.body.classList.remove('no-scroll');
+  // }
 })();

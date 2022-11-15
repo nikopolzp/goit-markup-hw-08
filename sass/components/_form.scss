@@ -2,9 +2,13 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: $title-text-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .modal__field {
@@ -77,6 +81,12 @@
   @include centeredFlex();
   justify-content: center;
   margin: 20px auto 30px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .modal__check + .modal__check-icon {
@@ -93,6 +103,8 @@
 }
 
 .modal__link-policy {
+  font-size: 12px;
+  line-height: calc(14 / 12);
   margin-left: 7px;
   color: $accent-color;
 }

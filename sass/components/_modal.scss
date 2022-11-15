@@ -18,14 +18,19 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: auto;
   padding: 40px;
   background: $primary-color;
   box-shadow: $multilevel-box-shadow;
   border-radius: 4px;
   transform: rotate(0) translate(-50%, -50%);
   transition: transform $timing-function;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 
   .backdrop.is-hidden & {
     transform: rotate(-120deg) translate(-50%, -50%);
