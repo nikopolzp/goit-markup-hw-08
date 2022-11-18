@@ -1,22 +1,8 @@
 .contact__list {
-  @include centeredFlex();
-  margin-left: auto;
-}
-
-.contact__list {
   @media screen and (max-width: 767px) {
-    display: flex;
-
-    flex-direction: row-reverse;
-    flex-direction: column-reverse;
-    gap: 0;
-    & :first-child {
-      margin-bottom: 64px;
-    }
-    & :last-child {
-      margin-bottom: 32px;
-    }
+    display: none;
   }
+  margin-left: auto;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: column;
   }
@@ -26,27 +12,14 @@
   }
 }
 
-.phone {
-  padding: 0 0 21;
-}
-.mail {
-  padding: 21px 0 0;
-  margin-bottom: 10px;
-}
-
 .contact__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-@media screen and (max-width: 767px) {
-  .contact__icon {
-    display: none;
-  }
-}
-
 .contact__link {
   @include centeredFlex();
+  padding: 32px 0;
 
   font-weight: 500;
   transition: color $timing-function;
@@ -54,69 +27,5 @@
   &:hover,
   &:focus {
     color: $accent-color;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 32px 0;
-  }
-}
-
-// @media screen and (max-width: 767px) {
-//   .contact__link {
-//     padding: 0;
-//   }
-// }
-
-// @media screen and (max-width: 767px) {
-//   .contact__link--big {
-//     font-style: normal;
-//     font-weight: 500;
-//     font-size: 24px;
-//     line-height: 28px;
-//     letter-spacing: 0.02em;
-//   }
-// }
-
-// @media screen and (max-width: 767px) {
-//   .contact__link--big-blue {
-//     font-weight: 500;
-//     font-size: 34px;
-//     line-height: calc(40 / 34);
-
-//     letter-spacing: 0.02em;
-
-//     color: $accent-color;
-//   }
-// }
-
-// @media screen and (min-width: $tablet) {
-//   .contact__link {
-//     @include centeredFlex();
-
-//     &:hover,
-//     &:focus {
-//       color: $accent-color;
-//     }
-//   }
-// }
-
-// .burger-socials__list {
-//   display: flex;
-// }
-// .burger-socials__item:not(:first-child) {
-//   padding-left: 20px;
-// }
-// .burger-socials__link {
-//   font-weight: 500;
-//   font-size: 18px;
-//   line-height: calc(22 / 18);
-
-//   letter-spacing: 0.02em;
-
-//   color: $accent-color;
-// }
-
-@media screen and (min-width: 768px) {
-  .burger-socials__list {
-    display: none;
   }
 }

@@ -7,31 +7,24 @@
   background: $backdrop-background;
   opacity: 1;
   transition: opacity $timing-function;
-
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  height: auto;
+  width: 528px;
+  height: 581px;
   padding: 40px;
   background: $primary-color;
   box-shadow: $multilevel-box-shadow;
   border-radius: 4px;
   transform: rotate(0) translate(-50%, -50%);
   transition: transform $timing-function;
-
-  @media screen and (min-width: 1200px) {
-    width: 528px;
-    height: 581px;
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    height: 609px;
   }
-
   .backdrop.is-hidden & {
     transform: rotate(-120deg) translate(-50%, -50%);
   }

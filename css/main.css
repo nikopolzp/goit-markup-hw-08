@@ -111,6 +111,12 @@ address {
   color: #212121;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -147,6 +153,11 @@ address {
 .nav__list {
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .nav__list {
+    display: none;
+  }
+}
 
 .nav__item:not(:first-child) {
   padding-left: 50px;
@@ -179,23 +190,11 @@ address {
 }
 
 .contact__list {
-  display: flex;
-  align-items: center;
   margin-left: auto;
 }
-
 @media screen and (max-width: 767px) {
   .contact__list {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-direction: column-reverse;
-    gap: 0;
-  }
-  .contact__list :first-child {
-    margin-bottom: 64px;
-  }
-  .contact__list :last-child {
-    margin-bottom: 32px;
+    display: none;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -211,76 +210,131 @@ address {
   }
 }
 
-.phone {
-  padding: 0 0 21;
-}
-
-.mail {
-  padding: 21px 0 0;
-  margin-bottom: 10px;
-}
-
 .contact__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-@media screen and (max-width: 767px) {
-  .contact__icon {
-    display: none;
-  }
-}
 .contact__link {
   display: flex;
   align-items: center;
+  padding: 32px 0;
   font-weight: 500;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;
 }
-@media screen and (min-width: 1200px) {
-  .contact__link {
-    padding: 32px 0;
-  }
-}
 
-@media screen and (min-width: 768px) {
-  .burger-socials__list {
-    display: none;
-  }
-}
-.mobile-menu {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header__button {
-  display: inline-block;
-  margin: 0;
+.menu-open {
+  border: none;
   padding: 0;
+  margin-left: auto;
   background-color: transparent;
 }
-.header__button .header__icon-cross {
-  display: none;
-}
-.header__button.is-open .header__icon-cross {
-  display: block;
-}
-.header__button.is-open .header__icon-menu {
-  display: none;
+@media screen and (min-width: 768px) {
+  .menu-open {
+    display: none;
+  }
 }
 
-@media (min-width: 768px) {
-  .menu {
+.mob-menu {
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 0 48px 40px;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
     display: none;
   }
 }
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
+
+.mob-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
 }
+
+.mob-menu__list {
+  margin-bottom: 32px;
+}
+
+.mob-menu__item:not(:first-child) {
+  margin-top: 32px;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+.mob-menu__link:focus, .mob-menu__link:hover {
+  color: #2196f3;
+}
+
+.mob-contact__list {
+  margin-bottom: 64px;
+}
+
+.mob-contact__item:first-child {
+  margin-bottom: 32px;
+}
+
+.mob-contact__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.mob-contact__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mob-socials__list {
+  display: flex;
+}
+
+.mob-socials__item:not(:first-child) {
+  margin-left: 20px;
+  position: relative;
+}
+.mob-socials__item:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  left: -10px;
+  height: 22px;
+  width: 2px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-socials__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
 .socials__list {
   display: flex;
   justify-content: center;
@@ -480,17 +534,13 @@ address {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  height: auto;
+  width: 528px;
+  height: 581px;
   padding: 40px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -498,10 +548,10 @@ address {
   transform: rotate(0) translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .modal {
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
   }
 }
 .backdrop.is-hidden .modal {
@@ -636,8 +686,6 @@ address {
 }
 
 .modal__link-policy {
-  font-size: 12px;
-  line-height: 1.1666666667;
   margin-left: 7px;
   color: #2196f3;
 }
@@ -675,7 +723,7 @@ address {
   background-size: cover;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .background {
     background-image: url("../images/hero-mobile-960.jpg");
   }
@@ -685,7 +733,7 @@ address {
     background-image: url("../images/hero-tablet-768.jpg");
   }
 }
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
   .background {
     background-image: url("../images/hero-tablet-1536.jpg");
   }
@@ -695,7 +743,7 @@ address {
     background-image: url("../images/hero-desktop-1600.jpg");
   }
 }
-@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
   .background {
     background-image: url("../images/hero-desktop-3200.jpg");
   }
@@ -943,7 +991,7 @@ address {
 @media screen and (max-width: 767px) {
   .project__list {
     margin-bottom: 40px;
-    max-width: 326px;
+    max-width: 330px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -959,6 +1007,9 @@ address {
 }
 .project__item:not(:first-child) {
   margin-left: 8px;
+}
+.project__item:nth-child(-n+3) {
+  margin-bottom: 15px;
 }
 
 .project__button {
