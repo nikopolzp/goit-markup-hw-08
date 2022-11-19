@@ -18,10 +18,13 @@
 }
 
 .project-examples__link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   transition: box-shadow $timing-function;
   & .link:hover,
   & .link:focus {
-    display: block;
     box-shadow: $examples-multilevel-box-shadow;
   }
 }
@@ -62,6 +65,7 @@
   padding: 20px 24px;
   border: $examples-border;
   border-top: none;
+  flex-grow: 1;
 }
 
 .project-examples__subtitle {

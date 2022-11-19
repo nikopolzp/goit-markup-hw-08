@@ -1,14 +1,14 @@
 @media screen and (max-width: 767px) {
   .address {
+    text-align: center;
     margin-right: 0px;
     margin-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .address {
     margin-right: 70px;
-    text-align: center;
   }
 }
 
