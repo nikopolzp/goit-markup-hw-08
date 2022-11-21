@@ -5,6 +5,7 @@
 }
 
 .client__item {
+  z-index: 2;
   height: 90px;
   @media screen and (max-width: 767px) {
     width: calc((100% - 30px) / 2);

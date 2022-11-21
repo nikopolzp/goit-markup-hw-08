@@ -9,12 +9,15 @@
 }
 
 .signup__form {
+  z-index: 1;
   @media screen and (min-width: $desktop) {
     display: flex;
   }
 }
 
 .signup__input {
+  position: relative;
+  z-index: 1;
   padding: 0 16px;
   width: 100%;
   height: 50px;

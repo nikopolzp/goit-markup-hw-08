@@ -1,4 +1,6 @@
 .project__list {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
