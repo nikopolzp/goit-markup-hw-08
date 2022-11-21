@@ -3,7 +3,7 @@
     display: none;
   }
   margin-left: auto;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     flex-direction: column;
   }
   @media screen and (min-width: $desktop) {
@@ -19,7 +19,7 @@
 
 .contact__link {
   @include centeredFlex();
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     &:first-child {
       margin-bottom: 10px;
     }

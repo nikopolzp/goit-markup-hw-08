@@ -1,14 +1,17 @@
 .background {
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 1600px;
-  height: 600px;
   background-color: $secondary-bg-color;
   background-image: $hero-linear-gradient, url('../images/hero-mobile-480.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -17,7 +20,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 481px) {
   .background {
     background-image: $hero-linear-gradient, url('../images/hero-tablet-768.jpg');
   }
@@ -29,7 +32,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
   .background {
     background-image: $hero-linear-gradient, url('../images/hero-desktop-1600.jpg');
   }
@@ -51,11 +54,10 @@
   color: $primary-color;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-@media (min-width: 1200px) {
-  .hero__title {
-    margin: 0 auto 30px;
+  @media screen and (max-width: $mobile) {
+    font-size: 5.4vw;
+  }
+  @media (min-width: 1200px) {
     max-width: 698px;
     font-size: 44px;
     line-height: 1.4;
@@ -69,18 +71,14 @@
   min-width: 200px;
   color: $primary-color;
   background-color: $accent-color;
-
+  @media (min-width: 1200px) {
+    padding: 10px 32px;
+    min-width: 216px;
+  }
   &:hover,
   &:focus {
     background-color: $hero-btn-active;
     box-shadow: $button-box-shadow;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero__button {
-    padding: 10px 32px;
-    min-width: 216px;
   }
 }
 

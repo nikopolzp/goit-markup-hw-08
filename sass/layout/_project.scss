@@ -1,24 +1,12 @@
 .project__list {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media screen and (max-width: 767px) {
-  .project__list {
-    margin-bottom: 40px;
-    max-width: 330px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .project__list {
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
     justify-content: center;
     margin-bottom: 30px;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .project__list {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
 }

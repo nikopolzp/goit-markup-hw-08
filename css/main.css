@@ -94,14 +94,15 @@ address {
 }
 
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.1785714286;
   color: #212121;
 }
 @media screen and (min-width: 1200px) {
   .title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.1666666667;
   }
@@ -141,9 +142,15 @@ address {
 }
 
 .nav__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-right: 60px;
+}
+@media screen and (min-width: 768px) {
+  .nav__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .nav__accent {
@@ -291,6 +298,11 @@ address {
   letter-spacing: 0.02em;
   color: #212121;
 }
+@media screen and (max-width: 480px) {
+  .mob-menu__link {
+    font-size: 8vw;
+  }
+}
 .mob-menu__link:focus, .mob-menu__link:hover {
   color: #2196f3;
 }
@@ -310,6 +322,11 @@ address {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
+@media screen and (max-width: 480px) {
+  .mob-contact__tel {
+    font-size: 7vw;
+  }
+}
 
 .mob-contact__mail {
   font-weight: 500;
@@ -317,6 +334,11 @@ address {
   line-height: 28px;
   letter-spacing: 0.02em;
   color: #757575;
+}
+@media screen and (max-width: 480px) {
+  .mob-contact__mail {
+    font-size: 5vw;
+  }
 }
 
 .mob-socials__list {
@@ -343,6 +365,11 @@ address {
   line-height: 1.2222222222;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+@media screen and (max-width: 480px) {
+  .mob-socials__link {
+    font-size: 3.7vw;
+  }
 }
 
 .socials__list {
@@ -383,33 +410,52 @@ address {
   padding-bottom: 60px;
   background-color: #2f303a;
 }
-
-.footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-
-@media screen and (max-width: 767px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 1199px) {
+  .footer {
     text-align: center;
-    justify-content: space-between;
   }
 }
-@media screen and (max-width: 767px) {
-  .address {
-    text-align: center;
-    margin-right: 0px;
+
+@media screen and (min-width: 768px) {
+  .footer-inner {
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-inner {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-wrap {
     margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) {
+  .container-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address {
+    margin-right: 165px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .address {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
   .address {
     margin-right: 70px;
   }
 }
+
 .address__logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -442,12 +488,12 @@ address {
   color: #2196f3;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer-socials {
-    text-align: center;
-    margin-left: auto;
+    margin-top: 60px;
   }
 }
+
 .appeal {
   display: block;
   margin-bottom: 20px;
@@ -458,6 +504,7 @@ address {
 
 .footer-socials__list {
   display: flex;
+  justify-content: center;
   padding-bottom: 0;
   gap: 10px;
 }
@@ -478,30 +525,40 @@ address {
   fill: #ffffff;
 }
 
-.signup {
-  margin-left: auto;
-}
-
 @media screen and (max-width: 1199px) {
   .signup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 60px auto 0;
+    max-width: 450px;
+    margin: 0 auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  .signup {
+    margin-left: 93px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .signup__form {
+    display: flex;
+  }
+}
+
 .signup__input {
-  margin-right: 12px;
   padding: 0 16px;
-  min-width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .signup__input {
+    display: block;
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 .signup__input::-moz-placeholder {
   padding: 15px 0;
@@ -723,15 +780,20 @@ address {
 
 .background {
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 1600px;
-  height: 600px;
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mobile-480.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-width: 1200px) {
+  .background {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -739,22 +801,22 @@ address {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mobile-960.jpg");
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 481px) {
   .background {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-768.jpg");
   }
 }
-@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 481px) and (min-device-pixel-ratio: 2), (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 481px) and (min-resolution: 192dpi), (min-width: 481px) and (min-resolution: 2dppx) {
   .background {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-1536.jpg");
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
   .background {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desktop-1600.jpg");
   }
 }
-@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
+@media (min-width: 769px) and (min-device-pixel-ratio: 2), (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 769px) and (min-resolution: 192dpi), (min-width: 769px) and (min-resolution: 2dppx) {
   .background {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desktop-3200.jpg");
   }
@@ -770,15 +832,19 @@ address {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
+@media screen and (max-width: 480px) {
+  .hero__title {
+    font-size: 5.4vw;
+  }
+}
 @media (min-width: 1200px) {
   .hero__title {
-    margin: 0 auto 30px;
     max-width: 698px;
     font-size: 44px;
     line-height: 1.4;
   }
 }
+
 .hero__button {
   display: block;
   margin: 0 auto;
@@ -787,17 +853,17 @@ address {
   color: #ffffff;
   background-color: #2196f3;
 }
-.hero__button:hover, .hero__button:focus {
-  background-color: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
 @media (min-width: 1200px) {
   .hero__button {
     padding: 10px 32px;
     min-width: 216px;
   }
 }
+.hero__button:hover, .hero__button:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 .button:hover,
 .button:focus {
   background-color: #188ce8;
@@ -836,11 +902,6 @@ address {
   background-color: #f5f4fa;
   border-radius: 4px;
 }
-@media screen and (max-width: 767px) {
-  .features__icon-background {
-    width: 100%;
-  }
-}
 
 .features__subtitle {
   margin-bottom: 10px;
@@ -861,7 +922,7 @@ address {
 .occupation {
   padding-top: 0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .occupation {
     display: none;
   }
@@ -997,13 +1058,7 @@ address {
 .project__list {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media screen and (max-width: 767px) {
-  .project__list {
-    margin-bottom: 40px;
-    max-width: 330px;
-  }
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .project__list {
@@ -1011,11 +1066,12 @@ address {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .project__list {
     margin-bottom: 50px;
   }
 }
+
 .project__item:not(:first-child) {
   margin-left: 8px;
 }

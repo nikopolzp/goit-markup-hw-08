@@ -1,28 +1,33 @@
 .signup {
-  margin-left: auto;
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 
-@media screen and (max-width: 1199px) {
-  .signup {
+.signup__form {
+  @media screen and (min-width: $desktop) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 60px auto 0;
   }
 }
 
 .signup__input {
-  margin-right: 12px;
   padding: 0 16px;
-  min-width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   color: $primary-color;
   border: 1px solid $signup-input-border;
   filter: $signup-input-filter;
   border-radius: 4px;
+  @media screen and (min-width: $desktop) {
+    display: block;
+    margin-right: 12px;
+    width: 358px;
+  }
 
   &::placeholder {
     padding: 15px 0;

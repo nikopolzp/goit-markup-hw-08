@@ -36,8 +36,6 @@
   background-color: transparent;
 }
 
-.mob-menu-burger {
-}
 .mob-menu__list {
   margin-bottom: 32px;
 }
@@ -50,6 +48,9 @@
   line-height: calc(47 / 40);
   letter-spacing: 0.02em;
   color: $title-text-color;
+  @media screen and (max-width: $mobile) {
+    font-size: 8vw;
+  }
 
   &:focus,
   &:hover {
@@ -68,8 +69,10 @@
   font-size: 34px;
   line-height: calc(40 / 34);
   letter-spacing: 0.02em;
-
   color: $accent-color;
+  @media screen and (max-width: $mobile) {
+    font-size: 7vw;
+  }
 }
 
 .mob-contact__mail {
@@ -77,8 +80,10 @@
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.02em;
-
   color: $primary-text-color;
+  @media screen and (max-width: $mobile) {
+    font-size: 5vw;
+  }
 }
 
 .mob-socials__list {
@@ -108,4 +113,7 @@
   letter-spacing: 0.02em;
 
   color: $accent-color;
+  @media screen and (max-width: $mobile) {
+    font-size: 3.7vw;
+  }
 }
