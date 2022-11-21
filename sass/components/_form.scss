@@ -5,16 +5,18 @@
   line-height: 1.5;
   text-align: center;
   color: $title-text-color;
+
+  @media (max-width: 449px) {
+    font-size: 4.4vw;
+  }
+
   @media screen and (min-width: 1200px) {
-    font-size: 20px;
     line-height: 1.15;
   }
 }
 
 .modal__field {
   position: relative;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 12px;
@@ -83,6 +85,10 @@
   margin: 20px auto 30px;
   font-size: 12px;
   line-height: calc(14 / 12);
+
+  @media (max-width: 449px) {
+    font-size: 2.6vw;
+  }
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: calc(24 / 14);
