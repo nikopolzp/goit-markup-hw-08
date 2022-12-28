@@ -8,6 +8,7 @@
   background: $backdrop-background;
   opacity: 1;
   transition: opacity $timing-function;
+  z-index: 100;
 }
 
 .modal {
@@ -19,6 +20,7 @@
   background: $primary-color;
   box-shadow: $multilevel-box-shadow;
   border-radius: 4px;
+
   transform: rotate(0) translate(-50%, -50%);
   transition: transform $timing-function;
 

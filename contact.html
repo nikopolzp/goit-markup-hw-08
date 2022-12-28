@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <header class="header" id="header">
+      <div class="container main-nav">
+        <nav class="nav">
+          <a class="logo nav__logo" lang="en" href="./index.html"
+            >Web<span class="nav__accent">Studio</span></a
+          >
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Студія</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="nav__item nav__link--current">
+              <a class="nav__link" href="./contact.html">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="contact__link" href="mailto:info@devstudio.com">
+              <svg class="contact__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contact__item">
+            <a class="contact__link" href="tel:+380961111111">
+              <svg class="contact__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <button class="menu-open" type="button" data-menu-open>
+          <svg class="menu-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_burger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <button class="mob-menu-close" type="button" data-menu-close>
+          <svg class="mob-menu-burger" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_close"></use>
+          </svg>
+        </button>
+        <div class="mob-menu--top">
+          <ul class="mob-menu__list">
+            <li class="mob-menu__item">
+              <a class="mob-menu__link" href="./index.html">Студія</a>
+            </li>
+            <li class="mob-menu__item">
+              <a class="mob-menu__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="#">Контакти</a></li>
+          </ul>
+        </div>
+        <div class="mob-menu--bottom">
+          <ul class="mob-contact__list">
+            <li class="mob-contact__item">
+              <a class="mob-contact__tel" href="tel:+380961111111"> +38 096 111 11 11</a>
+            </li>
+            <li class="mob-contact__item">
+              <a class="mob-contact__mail" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mob-socials__list">
+            <li class="mob-socials__item">
+              <a class="mob-socials__link" href="#">Instagram</a>
+            </li>
+            <li class="mob-socials__item">
+              <a class="mob-socials__link" href="#">Twitter</a>
+            </li>
+            <li class="mob-socials__item">
+              <a class="mob-socials__link" href="#">Facebook</a>
+            </li>
+            <li class="mob-socials__item">
+              <a class="mob-socials__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section contact"></section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="container-wrap">
+          <div class="address">
+            <a class="address__logo logo" lang="en" href="./index.html"
+              >Web<span class="address__accent">Studio</span></a
+            >
+            <address>
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    class="address__location"
+                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-socials">
+            <b class="footer-socials appeal">Приєднуйтесь</b>
+            <ul class="footer-socials__list">
+              <li class="footer-socials__item">
+                <a class="socials__link" href="#">
+                  <svg class="footer-socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-socials__item">
+                <a class="socials__link" href="#">
+                  <svg class="footer-socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twiter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-socials__item">
+                <a class="socials__link" href="#">
+                  <svg class="footer-socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-socials__item">
+                <a class="socials__link" href="#">
+                  <svg class="footer-socials__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="signup">
+          <b class="signup__appeal appeal">Підпишіться на розсилку</b>
+
+          <form class="signup__form">
+            <label>
+              <input class="signup__input" type="email" name="email" placeholder="E-mail" />
+            </label>
+            <button class="signup__button button" type="submit">
+              Підписатися
+              <svg class="signup__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <script src="./js/mobile-menu.js"></script>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/animate-header.js"></script>
+  </body>
+</html>
