@@ -270,14 +270,34 @@
         </div>
       </div>
     </footer>
+    <!-------------------- Custom scroll bar ---------------->
+    <div class="header-indicator">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
+    <!-------------------- up button ---------------->
+    <div class="up-button">
+      <a id="up-button" class="up-button__link" href="#home">
+        <svg
+          class="animate__animated animate__infinite animate__pulse animate__slower up-button__icon"
+          width="30"
+          height="30"
+        >
+          <use href=""></use>
+        </svg>
+      </a>
+    </div>
     <!-- particles.js container -->
     <div id="particles-js"></div>
+    <!-------------------- Custom sclroll bar ---------------->
+    <script type="module" src="./js/custom-scroll-bar.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="./js/particles.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/wow.js"></script>
-    <script src="./js/animate-header.js"></script>
+    <script type="module" src="./js/animate-header.js"></script>
   </body>
 </html>
