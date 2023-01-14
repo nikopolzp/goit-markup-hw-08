@@ -1,14 +1,15 @@
-window.onscroll = function () {
-  scrollFunction();
-};
+// window.onscroll = function () {
+//   scrollFunction();
+// };
 
 function scrollFunction() {
   let scrollPos = 100;
   let header = document.getElementById('header');
-
+  console.log(header);
   if (document.body.scrollTop > scrollPos || document.documentElement.scrollTop > scrollPos) {
     header.classList.add('active');
   } else {
     header.classList.remove('active');
   }
 }
+export default scrollFunction;

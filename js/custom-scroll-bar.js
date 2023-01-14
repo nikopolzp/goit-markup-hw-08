@@ -1,8 +1,9 @@
 // -------------CUSTOM-CURSOR-[END]-------------
-
+import scrollFunction from './animate-header';
 // -------------CUSTOM-HORIZONTAL-INDICATOR-[START]-------------
 window.onscroll = function () {
   myFunction();
+  scrollFunction();
 };
 
 function myFunction() {
