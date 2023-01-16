@@ -1,6 +1,7 @@
-// window.onscroll = function () {
-//   scrollFunction();
-// };
+window.onscroll = function () {
+  myFunction();
+  scrollFunction();
+};
 
 function scrollFunction() {
   let scrollPos = 100;
@@ -12,4 +13,11 @@ function scrollFunction() {
     header.classList.remove('active');
   }
 }
-export default scrollFunction;
+// -------------CUSTOM-HORIZONTAL-INDICATOR-[START]-------------
+function myFunction() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.getElementById('myBar').style.width = scrolled + '%';
+}
+// -------------CUSTOM-HORIZONTAL-INDICATOR-[END]-------------
