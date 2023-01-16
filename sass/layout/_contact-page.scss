@@ -1,7 +1,16 @@
 .contacts__inner {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+}
+
+.modal-contact{
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 40px;
+}
 }
 .modal-contact {
   max-width: 500px;

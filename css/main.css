@@ -1367,10 +1367,18 @@ p::selection {
   line-height: 1.9;
 }
 
-.contacts__inner {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+@media screen and (min-width: 1200px) {
+  .contacts__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-contact {
+    margin-bottom: 40px;
+  }
 }
 
 .modal-contact {
